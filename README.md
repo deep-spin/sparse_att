@@ -1,7 +1,8 @@
 # sparse_attention_as_kernel_regression
 # Sparse Attention as Compact Kernel Regression
 
-Official code for the **Sparse Attention as Compact Kernel Rgression**. paper
+Official code for the **Sparse Attention as Compact Kernel Rgression** paper.
+
 *Saul Santos*, *Nuno Gonçalves*, *Daniel C. McNamee*, *Marcos Treviso*, and *André F.T Martins*
 
 <p align="center">
