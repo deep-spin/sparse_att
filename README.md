@@ -27,4 +27,32 @@ $\alpha = 1 + \frac{1}{n}$ for $n \in \mathbb{N}$, while the softmax/Gaussian re
 
 ## Language Modeling
 ### Installation and Reproducibility
-Follow (Memory Mosaics)[https://github.com/facebookresearch/MemoryMosaics] instructions with our code and use the hyparparameters mentioned in the Appendix.
+Follow [Memory Mosaics](https://github.com/facebookresearch/MemoryMosaics) instructions with our code and use the hyparparameters mentioned in the Appendix.
+
+You will need to:
+
+```
+cd Library
+pip install -r requirements.txt
+```
+
+## In-Context Learning
+### Installation
+Follow [Memory Mosaics](https://github.com/facebookresearch/MemoryMosaics) instructions. 
+You will need to:
+
+```
+cd ICLL
+pip install -r requirements.txt
+```
+If you have problems with triton in adasplash package (which you have also to install), remove this line of code (line 3) of the init file of adasplash library:
+
+```
+from .triton_entmax import triton_entmax 
+```
+### Reproducibility
+Simply run this command for all method with these tuned hyperparameters:
+```
+for n in 1000 2500 5000 10000 20000 40000; do python train.py train.test=True experiment=dfa/mm dataset.num_test_examples=1000 dataset.num_examples=$n model.n_layer=2 model.method=softmax model.n_embd=128 model.n_head=8 optimizer.lr=1e-4 optimizer.weight_decay=0.01; done
+
+```
