@@ -65,4 +65,4 @@ train_memory_mosaics_synthetic.py --batch_size=256 --gradient_accumulation_steps
 
 ```
 
-The data will be released soon or before that contact us so we can providem it.
+The data will be released soon or before that contact us so we can provide it.
