@@ -55,3 +55,14 @@ Simply run this command for all method with these tuned hyperparameters:
 for n in 1000 2500 5000 10000 20000 40000; do python train.py train.test=True experiment=dfa/mm dataset.num_test_examples=1000 dataset.num_examples=$n model.n_layer=2 model.method=softmax model.n_embd=128 model.n_head=8 optimizer.lr=1e-4 optimizer.weight_decay=0.01; done
 
 ```
+
+## Length Generalization
+ Reuse the same environment from the language modeling task and run as an example with the hyperparameters presented in the appendix:
+
+ ```
+torchrun --standalone --nproc_per_node=1 \
+train_memory_mosaics_synthetic.py --batch_size=256 --gradient_accumulation_steps=1 --n_layer 2 --n_head 8 --datapath=your_data_path --out_dir results_epoch/sort/1338 --task sort --dtype bfloat16 --seed=1338 --method top16_softmax
+
+```
+
+The data will be released soon or before that contact us so we can providem it.
