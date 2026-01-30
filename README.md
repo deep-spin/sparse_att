@@ -66,3 +66,9 @@ train_memory_mosaics_synthetic.py --batch_size=256 --gradient_accumulation_steps
 ```
 
 The data will be released soon or before that contact us so we can provide it.
+
+## Acknowledgments
+
+This code is based on [MemoryMosaics][https://github.com/facebookresearch/MemoryMosaics]
+
+* hang, J., Nolte, N., Sadhukhan, R., Chen, B., and Bottou, L. Memory mosaics. In Yue, Y., Garg, A., Peng, N., Sha, F., and Yu, R. (eds.), International Conference on Representation Learning, volume 2025, pp. 36412–36433, 2025
